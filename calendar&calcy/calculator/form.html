@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Document</title>
+<link rel='stylesheet' href='/calculator/form.css'>
+</head>
+<body>
+<div class="cont">
+    <form action="#" name="forjs" target="framename" method="GET" autocomplete="on">
+        <label for="a">Name:</label>
+        <input type="text" id="a" name="fname" onclick="document.forjs.fname.value = 'av'"  value="20 characters only">
+        <br><label for="b">Surname:</label>
+        <input type="text" id="b" name="Lname" value="20 characters only">
+        <br><label for="c">Age:</label>
+        <input type="number" id="c"  name="Age" value="0">
+        <br><label for="d">Number:</label>
+        <input type="number" id="d" name="Number" value="0">
+        <!-- <label for="e">Submit:</label> -->
+        <br><input type="submit"  id="e" value="Submit">
+
+    </form>
+    <!-- without name element , it wont submit, name is compulsory -->
+</div>
+</body>
+</html>

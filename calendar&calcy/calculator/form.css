@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+/* design 1 */
+
+/* .cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    label{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+     }  */
+    
+/* design 2  */
+    
+.cont, label, input{
+    display: block;
+
+}
+.cont{
+    background: rgb(169, 168, 168);
+}
+
+label{
+    font-size: 2.2em;
+}
+
+input{
+    width: 95vw;
+    height: 10vh;
+    background: rgb(138, 138, 138);
+}
+
+input[type=submit]{
+ background: rgb(92, 89, 89);
+ font-size: 1.2em;
+ color: rgb(255, 255, 255);
+ font-weight: 600;
+}

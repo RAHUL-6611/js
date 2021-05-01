@@ -1,0 +1,80 @@
+body{display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+
+}
+
+#clockcontainer{
+    position: relative;
+/* background: red; */
+width: 60vw;
+height: 60vw;
+background: url('/clipart2.png') no-repeat;
+/* mix-blend-mode: hard-light; */
+mix-blend-mode:screen;
+background-size: 100%;
+border: 1px solid black;
+
+}
+
+#center{
+    position: absolute;
+    width: 10.5%;
+    height: 10.5%;
+    background: rgb(141, 56, 56);
+    top: 44%;
+    left: 45%;
+    border-radius: 60%
+}
+
+
+#hour, #minute, #second{
+    position: absolute;
+    background: rgb(141, 56, 56);
+    border-radius: 10px;
+    width: 6px;
+    z-index: 1;
+    left: 49.5%;
+    bottom: 54%;
+    transform-origin: bottom;
+
+}
+
+#hour{
+height: 15%;
+/* top: 24%; */
+}
+
+/* #hour::before{
+    content: '.';
+    top: 61px;
+    left: -17px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgb(116, 45, 45);
+    border-radius: 20px;
+} */
+
+
+#minute{
+    
+    /* width: 6px; */
+    height: 20%;
+    /* left: 20.5%; */
+    /* top: 19.2%; */
+    /* display: none; */
+    
+}
+
+#second{
+    
+    /* width: 6px; */
+    height: 28%;
+    /* left: 20.5%; */
+    /* top: 16.5%; */
+    /* display: none; */
+
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Document</title>
+<link rel='stylesheet' href='/clock.css'>
+<!-- <script src="/index.js"></script> -->
+
+</head>
+<body>
+
+    <div id="clockcontainer">
+        <div id="center"></div>
+        <div id="hour"> </div>
+        <div id="minute"> </div>
+        <div id="second"> </div>
+
+    </div>
+
+
+    <script>
+
+        let a = document.getElementById('clockcontainer');
+        let hour = document.getElementById('hour');
+        
+        setInterval(() => {
+            d = new Date();
+            htime = d.getHours();
+            mtime = d.getMinutes();
+            stime = d.getSeconds();
+            hrotation = 30*htime + mtime/2;
+            // console.log(hrotation);
+            mrotation = (6*mtime + stime/10);
+            srotation = 6*stime;
+            
+            hour.style.transform = `rotate(${hrotation}deg)`;
+            minute.style.transform = `rotate(${mrotation}deg)`;
+            second.style.transform = `rotate(${srotation}deg)`;
+        }, 1000);
+        
+        </script>
+
+<!-- // minute.style.transform = 'rotate(25deg)'; -->
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Document</title>
+<link rel='stylesheet' href='/clock2.css'>
+</head>
+<body>
+<div class="clock">
+    <div class="hour">
+        <div class="hr" id="hr"></div>
+    </div>
+    <div class="min">
+        <div class="mn" id="mn"></div>
+    </div>
+    <div class="sec">
+        <div class="sc" id="sc"></div>
+    </div>
+</div>
+<script>
+    // const deg =6;
+    // const hr = document.querySelector("#hr");
+    // const mn = document.querySelector("#mn");
+    // const sc = document.querySelector("#sc");
+
+    
+    
+    
+    
+    setInterval(() => {
+        d = new Date();
+
+        h = d.getHours();
+        m = d.getMinutes();
+        s = d.getSeconds();
+
+        hrotate = 30*h + m/2 + s/12;
+        mrotate = 6*m + s/10;
+        srotate = 6*s;
+
+        hr.style.transform = `rotate(${hrotate}deg)`;
+        mn.style.transform = `rotate(${mrotate}deg)`;
+        sc.style.transform = `rotate(${srotate}deg)`;
+
+
+
+
+    },1000)
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100;1,200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+section{   
+
+    position: relative;
+    min-height: 100vh;
+    background: #161623;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: unset; */
+    overflow: hidden;
+    animation: a3 30s linear infinite;
+
+}
+
+@keyframes a3 {
+    10%{ background: hsla(90%, 70%, 50%, 1);}
+    20%{ background: rgb(115, 255, 0);}
+    30%{ background: rgb(251, 255, 0);}
+    40%{ background: rgb(255, 166, 0);}
+    50%{ background: rgb(255, 0, 0);}
+    60%{ background: rgb(0, 255, 242);}
+    70%{ background: rgb(0, 123, 255);}
+    80%{ background: rgb(225, 0, 255);}
+    90%{ background: rgb(255, 0, 119);}
+    0%,100%{ background: rgba(29, 23, 23,0.8);}
+
+    
+}
+
+section::before{
+    position: absolute;
+    /* top: 60px; */
+    /* left: 250px; */
+    content: 'Rahul';
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgb(255, 182, 47) ,rgb(255, 0, 119) 90%);
+    transform: translate(-290px,-150px);
+    animation: a1 24s ease-out infinite;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unset;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+}
+/* 
+@keyframes a1
+{
+    0%,100%
+    {
+    transform: translateX(0px) translateY(0px) scale(0.5);
+    opacity: 0;
+    }
+    50%
+    {
+        transform: translateX(20px) translateY(20px) scale(1.5);
+        box-shadow: 10px 10px 50px 300px rgb(3, 255, 242);
+        opacity: 1;
+    }
+    
+} */
+section::after{
+    position: absolute;
+    /* bottom: 60px; */
+    /* right: 250px; */
+    content: 'Parmar';
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgb(0, 123, 255) ,rgb(64, 255, 0) 70%);
+    transform: translate(290px,150px);
+    animation: a1 24s ease-out infinite;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unset;
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.box
+{
+    position: relative;
+    z-index: 100000;
+    
+}
+
+.container
+{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255,0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255,0.5);
+    border-right: 1px solid rgba(255, 255, 255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255,0.2);
+    border-radius: 10px; 
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: unset; */
+}
+
+#dycalendar
+{
+    width: 100%;
+    padding: 20px;
+
+}
+
+#dycalendar table
+{
+    width: 100%;
+    margin-top: 40px;
+    border-spacing: 5px;
+}
+
+#dycalendar table tr:nth-child(1) td
+{
+    background: #fff;
+    color: #111;
+    border-radius: 4px;
+    font-weight: 600;
+
+}
+
+#dycalendar table td
+{
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+#dycalendar table td:hover
+{
+    background: #fff;
+    color: #111 !important;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+ .dycalendar-month-container .dycalendar-target-date
+{
+    background: #fff !important;
+    color: #111 !important;
+    
+}
+.dycalendar-month-container .dycalendar-header
+.dycalendar-prev-next-btn.prev-btn
+{   
+
+    background: #fff;
+    color: #111;
+    width: 44px;
+    height: 38px;
+    left: 4px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: unset; */
+    font-size: 24px;
+}
+
+.dycalendar-month-container .dycalendar-header
+.dycalendar-prev-next-btn.next-btn
+{
+
+    background: #fff;
+    color: #111;
+    width: 44px;
+    height: 38px;
+    right: 4px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: unset; */
+    font-size: 24px;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year
+{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+
+}
+

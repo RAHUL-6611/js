@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Document</title>
+<link rel='stylesheet' href='/form.css'>
+</head>
+<body>
+<form action="action.php" id="form">
+    <div class="formdesign" id="name">
+
+        <label for="fname" class="a1"> First Name : </label>
+        <input type="text" id="fname" name="d" placeholder="lula"  class="B1" required> 
+        
+        <label for="fname" class="a1"> Last Name :</label>
+        <input type="text" id="fname" name="d" placeholder="bula"  class="B1" required> 
+        
+        <label for="age" class="a1" > Age : </label>
+        <input type="date" name="d" id="age" min="6" max="100" value="18" class="B1" required> 
+        
+        <label for="em" class="a1"> Email : </label>
+        <input type="email" name="d" id="em"  class="B1" required>
+
+        <label for="texts" class="a1"> Feedback : </label>
+        <textarea name="d" id="texts" cols="30" rows="10" >
+        </textarea>
+
+        <input type="submit" value="submit" class="C1">
+        <!-- <input type="date" name="" id=""> -->
+        
+
+
+    </div>
+</form>
+
+<script>
+
+    // function seterror(id, error){
+    //     element = document.getElementById(id);
+    //     element.getElementsByClassName('formerror')[0].innerHtm
+    // }
+    // var name = document.forms['form']['fname'].value;
+    // console.log('name');
+
+
+    const emailid = document.getElementById('em').value;
+    const emaild = document.getElementById('em');
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+    if (emailid.match(pattern)){
+        emaild.style.backgroundColor = "green";    
+        // document.alert('yes');
+    }
+    else{
+        // document.alert('no');
+        // window.alert('nah');
+        emaild.style.backgroundColor = "red";    
+    }
+    if (emailid == ""){
+        emaild.style.backgroundColor = "lightblue";    
+
+    }
+
+</script>
+</body>
+</html>

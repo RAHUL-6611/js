@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Document</title>
+<link rel='stylesheet' href='/hex.css'>
+</head>
+<body>
+
+    <h1> <code><span class="a">Color</span>
+         <span class="b">codes</span>
+         <span class="c"> by</span>
+        <span class="d"> Parmaras</span></code></h1>
+
+    <button class="bottleup" onclick="addColor()">Refresh</button>
+
+    <section class="container"> </section>
+</body>
+
+<script>
+    
+    for (i= 0 ; i<100; i++){
+            var oneblock = document.createElement("div");
+            oneblock.classList.add('block');
+            // oneblock.style.backgroundColor = colorcode();
+            
+            document.querySelector('.container').appendChild(oneblock);
+            }
+    
+    const btn = document.querySelector('.btn');
+    const randomBlock = document.querySelectorAll('.block');
+    randomBlock.forEach(e => {
+        e.innerHTML = "Please Reload";
+    })    
+
+    function Randomhexcode(){
+        var condition = "ABCDEF123456789";
+        var colorlength = 6;
+        var color = "";
+
+        for (var i = 0; i <colorlength; i++){
+            var randomColor = Math.floor(Math.random() * condition.length);
+            console.log(randomColor);
+            color += condition.substring(randomColor, randomColor+1);
+        }
+        console.log(color);
+        return "#"+color;
+    }
+
+    function addColor(){
+        randomBlock.forEach(e =>{
+            var newColor = Randomhexcode();
+            e.classList.add(".bhag");
+            e.style.backgroundColor = newColor;
+            e.innerHTML = newColor;
+            e.style.opacity = 1;
+        })
+    }
+
+    // Randomhexcode();
+        // function colorcode(){
+        //     var color = [];
+        //     var pick = Math.floor(Math.random()*10);
+        //     console.log(pick);
+        //     var choose = condition.substring(pick, pick+6);
+        //     console.log(choose);
+            
+        //     return "#" + choose;
+        // }
+
+    
+</script>
+</html>
